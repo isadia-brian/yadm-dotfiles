@@ -1,0 +1,37 @@
+"$schema" = "https://yazi-rs.github.io/schemas/yazi.json"
+
+
+[manager]
+show_hidden = true
+sort_by = "size"
+sort_reverse = true
+show_symlink = true
+title_format = "{cwd}"
+linemode = "size"
+
+[opener]
+edit = [{ run = '$EDITOR "$@"', block = true, for = "unix" }]
+
+
+[plugin]
+prepend_previewers = [
+  { name = "*.csv", run = "rich-preview" },   # for csv files
+  { name = "*.md", run = "rich-preview" },    # for markdown (.md) files
+  { name = "*.rst", run = "rich-preview" },   # for restructured text (.rst) files
+  { name = "*.ipynb", run = "rich-preview" }, # for jupyter notebooks (.ipynb)
+  { name = "*.json", run = "rich-preview" },  # for json (.json) files
+  { name = "*.tsx", run = "rich-preview" },   # for typescriptreact files
+  { name = "*.ts", run = "rich-preview" },    # for typescript files
+  { name = "*.js", run = "rich-preview" },    # for javascript files
+  { name = "*.jsx", run = "rich-preview" },   # for javascriptreact files
+  # Archive previewer
+  { mime = "application/*zip", run = "ouch" },
+  { mime = "application/x-tar", run = "ouch" },
+  { mime = "application/x-bzip2", run = "ouch" },
+  { mime = "application/x-bzip3", run = "ouch" },
+  { mime = "application/x-gz", run = "ouch" },
+  { mime = "application/x-7z-compressed", run = "ouch" },
+  { mime = "application/x-rar", run = "ouch" },
+  { mime = "application/x-xz", run = "ouch" },
+  { mime = "application/xz", run = "ouch" },
+]

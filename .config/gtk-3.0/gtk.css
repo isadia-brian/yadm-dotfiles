@@ -1,0 +1,34 @@
+/* .xfce4-panel { */
+/*   border-bottom-left-radius: 13px; */
+/*   border-bottom-right-radius: 13px; */
+/*   border-top-left-radius: 13px; */
+/*   border-top-right-radius: 13px; */
+/* } */
+
+.xfce4-panel .tasklist .toggle :checked {
+  border-radius: 10px;
+}
+
+.tasklist button:checked {
+  border-bottom: 2px solid white;
+}
+
+.flat,
+.toggle {
+  font-family: "SpaceMono Nerd Font";
+  font-size: 16px;
+  padding: 5px;
+}
+.flat:hover,
+.toggle:hover {
+  font-family: "SpaceMono Nerd Font";
+  font-size: 16px;
+  padding: 5px;
+}
+.flat:checked,
+.toggle:checked {
+  font-family: "SpaceMono Nerd Font";
+  font-size: 16px;
+  border-bottom: 2px solid white;
+  padding: 5px;
+}
