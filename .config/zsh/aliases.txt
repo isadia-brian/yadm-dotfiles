@@ -1,0 +1,47 @@
+alias c="clear"
+alias e="exit"
+alias ll='eza -G -x --icons=always --hyperlink -a --group-directories-first --show-symlinks --color=always -w=141'
+alias ls="eza -a --no-filesize --long --color=always --icons=always --show-symlinks" 
+alias update='sudo apt update && sudo apt upgrade -y && sudo apt autoremove'
+alias listusers='bat /etc/passwd'
+alias listgroups='bat /etc/group'
+alias ai='conda init && conda activate aienv'
+alias rmd="rm -rf"
+alias clearcache='sudo sh -c "echo 3 >/proc/sys/vm/drop_caches"'
+alias lzd='lazydocker'
+alias lzg='lazygit'
+alias btop='sudo bashtop'
+alias cat='bat -p --color=always'
+alias cd='z'
+alias install='sudo apt install'
+alias rm='rm -r'
+alias cp='cp -r'
+
+
+# Colorize grep command
+alias grep='grep --color=auto'
+
+# git
+alias ga='git add .'
+alias gp='git push'
+
+alias al='nvim $HOME/.config/zsh/aliases.txt'
+alias dev='cd $HOME/Development/'
+alias nextjs='cd $HOME/Development/javascript/nextjs/'
+
+# Reload zshrc file
+alias zreload='source ~/.zshrc'
+
+# tree
+alias tree="tree -L 3 -a -I '.git' --charset X "
+alias dtree="tree -L 3 -a -d -I '.git' --charset X "
+
+# fzf 
+# called from ~/scripts/
+alias nlof="~/scripts/fzf_listoldfiles.sh"
+alias fman="compgen -c | fzf | xargs man"
+
+# postgres
+
+alias startpg='sudo systemctl start postgresql.service'
+alias stoppg='sudo systemctl stop postgresql.service'
